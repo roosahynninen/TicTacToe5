@@ -2,24 +2,20 @@ var counter = 0;
 
 var board = document.getElementById("board");
 var table = document.createElement("table");
-var row;
-var cell;
-var text;
 
 createTable();
 
 function createTable() {
   for (var i = 0; i < 5; i++) {
-    row = table.insertRow();
+    var row = table.insertRow();
 
     for (var j = 0; j < 5; j++) {
-      cell = row.insertCell();
-      text = document.createTextNode("");
+      var cell = row.insertCell();
+      var text = document.createTextNode("");
       cell.appendChild(text);
     }
   }
   board.appendChild(table);
-  onClick();
 }
 
 function onClick() {
@@ -39,7 +35,7 @@ function fill(cell) {
       winCheck();
       drawCheck();
       counter++;
-      document.getElementById("turnIndicator").innerHTML = "Player 2's turn";
+      document.getElementById("info").innerHTML = "Player 2's turn";
     } else {
       alert("Pick a free cell");
     }
@@ -49,7 +45,7 @@ function fill(cell) {
       winCheck();
       drawCheck();
       counter++;
-      document.getElementById("turnIndicator").innerHTML = "Player 1's turn";
+      document.getElementById("info").innerHTML = "Player 1's turn";
     } else {
       alert("Pick a free cell");
     }
@@ -162,4 +158,12 @@ function empty() {
       table.rows[i].cells[j].innerHTML = "";
     }
   }
+  if (counter % 2 === 0) {
+    document.getElementById("info").innerHTML = "Player 1 you start";
+  } else {
+    document.getElementById("info").innerHTML = "Player 2 you start";
+  }
 }
+
+empty(table);
+onClick(table);

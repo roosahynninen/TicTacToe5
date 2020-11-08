@@ -1,0 +1,16 @@
+{
+  "name": "tictactoe5",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js localhost 8080"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "mongoose": "5.9.21",
+    "pug": "3.0.0"
+  },
+  "keywords": []
+}

@@ -1,22 +1,22 @@
 doctype html
 head
-	title Tic Tac Toe
-	meta(charset='UTF-8')
-	style
-		include ../src/styles.css
+  title Tic Tac Toe
+  meta(charset='UTF-8')
+  style
+    include ../src/styles.css
 
 body
-	h1 Tic Tac Toe
-	p
-		| Player 1: X
-		br
-		| Player 2: O
+  h1 Tic Tac Toe
+  p#info
+    | Player 1 is X
+    br
+    | Player 2 is O
+    br
+    br
+    | Player 1 starts
+  #board
+  p#c
+  input(type='submit' value = "Restart" onclick='clearTable()')
 
-	#turnIndicator
-		| Player 1 (X) starts
-		br
-		|
-	#board
-	button(type='submit' onClick='empty()') Restart
-	script 
-		include ../src/play.js
+  script
+    include ../src/play.js

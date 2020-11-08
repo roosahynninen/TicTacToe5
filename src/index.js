@@ -3,7 +3,7 @@ const app = express();
 
 var mongoose = require("mongoose");
 var mongoDB =
-  "mongodb+srv://toimelae:Koodari666@cluster0.5merv.mongodb.net/TicTacToe?retryWrites=true&w=majority";
+  "mongodb+srv://rhynnine:Kissa888!@cluster0.unrpb.mongodb.net/TicTacToe?retryWrites=true&w=majority";
 
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
